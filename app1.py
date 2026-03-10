@@ -1,4 +1,4 @@
-!pip install streamlit
+
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -119,5 +119,6 @@ if st.button("Predict Outfit Aesthetic"):
     prediction = model.predict(input_data)
 
     result = aesthetic_encoder.inverse_transform(prediction)
+
 
     st.success("Recommended Aesthetic: " + result[0])
